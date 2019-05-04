@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA134800-7A7E-4DB4-B708-D0C3B3D97E8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CVisualizer</RootNamespace>
+    <AssemblyName>CVisualizer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlogirthmTypes.cs" />
+    <Compile Include="BinaryTreeDrawer.cs" />
+    <Compile Include="DirectMessage.cs" />
+    <Compile Include="Nodes\Operators\CaretSign.cs" />
+    <Compile Include="Nodes\Operations\CosineFunction.cs" />
+    <Compile Include="Nodes\Operations\CotangentFunction.cs" />
+    <Compile Include="Nodes\Operators\DivisionSign.cs" />
+    <Compile Include="Nodes\Operations\ExponentialFunction.cs" />
+    <Compile Include="Nodes\Operations\FactorialFunction.cs" />
+    <Compile Include="GraphDrawer.cs" />
+    <Compile Include="Nodes\HNode.cs" />
+    <Compile Include="InputPrompt.cs" />
+    <Compile Include="Exceptions\InvalidCharacterException.cs" />
+    <Compile Include="Exceptions\InvalidExpressionException.cs" />
+    <Compile Include="Nodes\IrrationalNumberNode.cs" />
+    <Compile Include="Exceptions\IsNotValidNaturalNumberException.cs" />
+    <Compile Include="Nodes\Operations\LogarithmFunction.cs" />
+    <Compile Include="Nodes\Operators\MinusSign.cs" />
+    <Compile Include="Exceptions\MissingBracketException.cs" />
+    <Compile Include="Nodes\Operators\MultiplicationSign.cs" />
+    <Compile Include="Nodes\NaturalNumberNode.cs" />
+    <Compile Include="Nodes\NumberNode.cs" />
+    <Compile Include="PathValidator.cs" />
+    <Compile Include="PolynomialCalculator.cs" />
+    <Compile Include="Nodes\RationalNumberNode.cs" />
+    <Compile Include="MainInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainInterface.Designer.cs">
+      <DependentUpon>MainInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\Node.cs" />
+    <Compile Include="Exceptions\LeftBracketExpectedException.cs" />
+    <Compile Include="Exceptions\OnlyOneParameterExpectedException.cs" />
+    <Compile Include="Exceptions\OperandExpectedException.cs" />
+    <Compile Include="Nodes\Operations\Operation.cs" />
+    <Compile Include="Nodes\Operators\Operator.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Nodes\PiNode.cs" />
+    <Compile Include="Nodes\Operators\PlusSign.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Exceptions\RightBracketExpectedException.cs" />
+    <Compile Include="Exceptions\SeparatorExpectedException.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDetails.Designer.cs">
+      <DependentUpon>ShowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\Operations\SineFunction.cs" />
+    <Compile Include="Nodes\Operations\TangentFunction.cs" />
+    <Compile Include="Exceptions\UnexpectedEndOfNumberException.cs" />
+    <Compile Include="Nodes\VariableNode.cs" />
+    <EmbeddedResource Include="MainInterface.resx">
+      <DependentUpon>MainInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDetails.resx">
+      <DependentUpon>ShowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon_settings.png" />
+    <Content Include="icon_start.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
